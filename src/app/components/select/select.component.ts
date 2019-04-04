@@ -20,7 +20,6 @@ export class SelectComponent implements OnInit{
   }
   ngOnInit() {
     this.selected = this.options[0].value;
-    console.log(this.selected);
   }
 }
 

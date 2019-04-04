@@ -43,7 +43,6 @@ export class ShopWindowComponent implements OnInit {
 
   ngOnInit() {
     this.courseService.getCourses().subscribe(response => {
-      console.log(response);
       this.listOfCourse = response;
     });
   }
