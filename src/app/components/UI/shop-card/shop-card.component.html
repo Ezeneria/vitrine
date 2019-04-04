@@ -1,0 +1,23 @@
+<div class="card">
+  <div class="card__img">
+    <img src="./assets/img/4188.jpg" alt="">
+  </div>
+  <div class="card__content">
+    <div class="title">
+      {{subject}}
+    </div>
+    <div class="subtitle">
+      {{grade | shopCardClassScool}}
+    </div>
+    <div class="genre">
+      {{genre}}
+    </div>
+      <ng-container *ngIf="checked">
+        <button mat-raised-button color="primary">{{price}} руб.</button>
+      </ng-container>
+    <ng-container *ngIf="!checked">
+      <button mat-raised-button color="primary">{{priceBonus}} бонусов</button>
+    </ng-container>
+    <mat-checkbox *ngIf="price && priceBonus" class="example-margin" [(ngModel)]="checked">рубли/бонусы</mat-checkbox>
+  </div>
+</div>

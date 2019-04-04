@@ -1,0 +1,28 @@
+<div class="shop-window">
+  <div class="container">
+    <h1>Витрина</h1>
+    <div class="shop-window__filters">
+      <fiz-select
+        (triggerValue)="subjectSelected = $event"
+        placeholder = "Предмет"
+        [options] = "selectFilter.subject">
+      </fiz-select>
+      <fiz-select (triggerValue)="genreSelected = $event" placeholder = "Жанр" [options] = "selectFilter.genre"></fiz-select>
+      <fiz-select  (triggerValue)="gradeSelected = $event" placeholder = "Класс" [options] = "selectFilter.grade"></fiz-select>
+      <div class="shop-window__search-field">
+        <input placeholder="Поиск" [(ngModel)]="searchInput" type="text">
+      </div>
+    </div>
+    <div class="shop-window__cards">
+      <fiz-shop-card
+        *ngFor="let course of listOfCourse?.items | filterCourses: subjectSelected:genreSelected:gradeSelected:searchInput"
+        [subject]="course.subject"
+        [genre]="course.genre"
+        [grade]="course.grade"
+        [price] ="course.price"
+        [priceBonus] ="course.priceBonus"
+      ></fiz-shop-card>
+    </div>
+  </div>
+</div>
+
