@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSelectModule } from '@angular/material/select';
 import { AppComponent } from './app.component';
-import { SelectComponent } from './components/select/select.component';
+import { SelectComponent } from './components/UI/select/select.component';
 import { ShopWindowComponent } from './components/shop-window/shop-window.component';
 import { ShopCardComponent } from './components/UI/shop-card/shop-card.component';
 import { CoursesService } from './services/courses.service';

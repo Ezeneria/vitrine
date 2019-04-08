@@ -1,5 +1,5 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {MatSelect} from '@angular/material';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { MatSelect } from '@angular/material';
 
 export interface Option {
   value: string;
